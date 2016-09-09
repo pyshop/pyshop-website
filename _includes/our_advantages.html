@@ -1,0 +1,63 @@
+<div class="container">
+    <div class="row">
+        <div class="grid_12">
+            <hr>
+            <div class="central">
+                <h4 class="title1">
+                    {{ page.our_advantages.headers.main_slogan }}
+                </h4>
+                <h6 class="title1">
+                    {{ page.our_advantages.headers.sub_slogan }}
+                </h6>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="https://code.jquery.com/ui/1.12.0/jquery-ui.js"></script>
+<script>
+    $( function() {
+        $( "#advantages-tabs" ).tabs();
+    } );
+</script>
+
+<div class="container">
+    <div class="row">
+        <div class="grid_12">
+            <div class="central_border">
+                <div class="row" id="advantages-tabs">
+                    <div class="grid_6">
+                        {% for tab_info in page.our_advantages.tabs %}
+                        <div class="left_box" id="advantages-tab-{{ forloop.index }}">
+                            <h4>
+                                {{ tab_info.content_header }}
+                            </h4>
+
+                            <p>
+                                {{ tab_info.content_text }}
+                            </p>
+                        </div>
+                        {% endfor %}
+                    </div>
+                    <div class="grid_6">
+                        <div class="rihgt_box">
+                            <h4>
+                                {{ page.our_advantages.headers.tabs_header }}
+                            </h4>
+
+                            <ul class="feature_list">
+                                {% for tab_info in page.our_advantages.tabs %}
+                                <li class="{{ tab_info.icon_class }}">
+                                    <a href="#advantages-tab-{{ forloop.index }}" style="color: #fff;">
+                                        {{ tab_info.title }}
+                                    </a>
+                                </li>
+                                {% endfor %}
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

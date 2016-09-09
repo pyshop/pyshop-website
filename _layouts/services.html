@@ -1,0 +1,146 @@
+---
+layout: base
+---
+<div class="container">
+    <div class="row">
+        <div class="m_50"></div>
+        <div class="grid_12">
+            <div class="central">
+                <h4 class="title1">
+                    {{ page.our_advantages.headers.main_slogan }}
+                </h4>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="https://code.jquery.com/ui/1.12.0/jquery-ui.js"></script>
+<script>
+    $( function() {
+        $( "#advantages-tabs" ).tabs();
+    } );
+</script>
+<div class="content">
+    <div class="container">
+        <div class="container">
+            <div class="row">
+                <div class="grid_12">
+                    <div class="central_border" style="background: none;">
+                        <div class="row" id="advantages-tabs">
+                            <div class="grid_4">
+                                <div class="left_box">
+                                    <ul class="feature_list">
+                                        {% for tab_info in page.our_advantages.tabs %}
+                                        <li class="{{ tab_info.icon_class }}">
+                                            <a href="#advantages-tab-{{ forloop.index }}" style="color: #fff;">
+                                                {{ tab_info.title }}
+                                            </a>
+                                        </li>
+                                        {% endfor %}
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="grid_8">
+                                {% for tab_info in page.our_advantages.tabs %}
+                                <div class="rihgt_box" id="advantages-tab-{{ forloop.index }}" style="height: 500px; background-image: url({{ tab_info.image_url }});">
+                                    <h4 style="border-bottom: 0; padding-top: 20px;">
+                                        {{ tab_info.content_header }}
+                                    </h4>
+
+                                    <p style="color: white;">
+                                        {{ tab_info.content_text }}
+                                    </p>
+                                </div>
+                                {% endfor %}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--
+<div class="main">
+    <h1>Аутсорсинг в области информационных технологий</h1>
+
+    <div class="service">
+        <div class="inline">
+            <ul class="service-list">
+                <li class="active">
+                    <p class="description">Разработка согласно подходу Agile</p>
+                </li>
+                <li>
+                    <p class="description">Валидация программного обеспечения согласно стандарту ISO 9001</p>
+                </li>
+                <li>
+                    <p class="description">Аутсорсинг в области SAP технологий</p>
+                </li>
+                <li>
+                    <p class="description">Ведение продукта на любом этапе жизненного цикла</p>
+                </li>
+            </ul>
+        </div>
+        <div class="inline">
+            <div class="service-slider">
+                <div class="slide active" style="background-image: url(/img/services/services_01.png);">
+                    <div class="description">
+                        <h2>Разработка согласно подходу Agile</h2>
+                        <p>
+                            Если у Вас есть идея, заложена концепция, а Ваши специалисты собрали все функциональные
+                            требования будущего решения, но некому его разработать? Мы можем Вам в этом помочь!
+                            <br>
+                            Наша команда предлагает свои услуги по разработке программного обеспечения согласно
+                            методологии Scrum и Kanban…
+                            <br><br>
+                            <a class="more-info" href="/2015/02/10/agile-post.ru.html">
+                                Подробнее
+                                <img src="/img/arrow.png" alt="more info arrow"/>
+                            </a>
+                        </p>
+                    </div>
+                </div>
+                <div class="slide" style="background-image: url(/img/services/services_02.png);">
+                    <div class="description">
+                        <h2>Валидация программного обеспечения согласно стандарту ISO 9001</h2>
+                        <p>
+                            Согласно системе менеджмента качества (СМК), валидация – это процесс приведения
+                            доказательств того, что требования конкретного внешнего потребителя или пользователя
+                            продукта, услуги или системы удовлетворены в той мере, которая изначально закладывалась
+                            идеей и концепцией продукта.
+                            <br><br>
+                            <a class="more-info" href="/2015/10/01/validation-post.ru.html">
+                                Подробнее
+                                <img src="/img/arrow.png" alt="more info arrow"/>
+                            </a>
+                        </p>
+                    </div>
+                </div>
+                <div class="slide" style="background-image: url(/img/services/services_03.png);">
+                    <div class="description">
+                        <h2>Аутсорсинг в области SAP технологий</h2>
+                        <p>
+                            У нас есть опыт разработки программного обеспечения, где требуется тесная интеграция с SAP
+                            системами. Мы предоставляем услуги по аутсорсингу разработки на SAP HANA, SAPUI5 и ABAP.
+                        </p>
+                    </div>
+                </div>
+                <div class="slide" style="background-image: url(/img/services/services_04.png);">
+                    <div class="description">
+                        <h2>Ведение продукта на любом этапе жизненного цикла</h2>
+                        <p>
+                            Идеальный сценарий аутсорсинга разработки ИТ-продукта для компаний, которые не
+                            специализируются на разработке программного обеспечения или программно-аппаратных
+                            комплексов.
+                            <br><br>
+                            <a class="more-info" href="/2015/01/15/stagegate-post.ru.html">
+                                Подробнее
+                                <img src="/img/arrow.png" alt="more info arrow"/>
+                            </a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+</div>
+-->

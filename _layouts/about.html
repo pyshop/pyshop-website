@@ -1,0 +1,33 @@
+---
+layout: base
+---
+	<div id="content">
+		
+		{{ page.content }}
+
+		{% if page.presentation_url %}
+			<div class="container">
+				<div class="row">
+					<div class="central">
+						<br/>
+						<a href="{{ page.presentation_url }}" download class="link" style="text-decoration: none!important;"><span style="font-size: 20px;"><span class="fa-download"></span> Скачать презентацию</span></a>
+						<br/>
+						<br/>
+						<br/>
+					</div>
+				</div>
+			</div>
+		{% endif %}
+
+		<div class="container">
+            <div class="row">
+                <div class="grid_12" style="background: url('/images/infographic/about_1.png') no-repeat center; height: 761px;">
+                </div>
+            </div>
+			<div class="row">
+				<br/><br/>
+			</div>
+		</div>
+
+		</div>
+	</div>

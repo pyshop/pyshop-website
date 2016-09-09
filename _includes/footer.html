@@ -1,0 +1,47 @@
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="grid_3">
+                <h5 class="footer_title">С использованием</h5>
+                <div class="powered">
+                    <div class="tech">
+                        <a href="https://github.com/pyshop/pyshop.github.io" target="_blank">
+                            <img src="/images/tech_logos/logo-github.png" alt="logo-github">
+                        </a>
+                        <a href="//jekyllrb.com" target="_blank">
+                            <img src="/images/tech_logos/logo-jekyll.png" alt="logo-jekyll">
+                        </a>
+                        <a href="//www.w3.org/TR/html5/" target="_blank">
+                            <img src="/images/tech_logos/logo-html5.png" alt="logo-html5">
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="grid_6">
+                <h5 class="footer_title">Разделы сайта</h5>
+                <ul class="footer_list">
+                    {% assign pages = site.pages | sort:"weight"  %}
+                    {% for node in pages %}
+                        {% if node.title %}
+                            {% if page.url == node.url %}
+                                <li class="current"><a href="{{ node.permalink }}">{{ node.title }}</a></li>
+                            {% else %}
+                                <li><a href="{{ node.permalink }}">{{ node.title }}</a></li>
+                            {% endif %}
+                        {% endif %}
+                    {% endfor %}
+                </ul>
+            </div>
+            <div class="grid_3">
+                <div class="align_right">
+                    <h5 class="footer_title">Контакты</h5>
+
+                    <ul class="footer_list">
+                        <li>Telephone: {{ site.phone }}</li>
+                        <li>E-mail: <a href="#">{{ site.email }}</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>

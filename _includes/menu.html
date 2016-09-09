@@ -1,0 +1,34 @@
+<nav>
+    <ul class="sf-menu clearfix">
+        {% comment %}
+        <li class="current"><a href="index.html">About</a></li>
+        <li><a href="index-1.html">Products</a>
+            <ul>
+                <li><a href="#">Vestibulum iaculis</a></li>
+                <li><a href="#">Fusce euismod conuat</a>
+                    <ul>
+                        <li><a href="#">Pellentesque sed</a></li>
+                        <li><a href="#">Aliquam congue ferm</a></li>
+                        <li><a href="#">Mauris accum</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Pellentesque</a></li>
+            </ul>
+        </li>
+        <li><a href="index-2.html">Sustainability</a></li>
+        <li><a href="index-3.html">News</a></li>
+        <li><a href="index-4.html">Contacts</a></li>
+        <li><a href="index-5.html">Blog</a></li>
+        {% endcomment %}
+        {% assign pages = site.pages | sort:"weight"  %}
+        {% for node in pages %}
+            {% if node.title %}
+                {% if page.url == node.url %}
+                    <li class="current"><a href="{{ node.permalink }}">{{ node.title }}</a></li>
+                {% else %}
+                    <li><a href="{{ node.permalink }}">{{ node.title }}</a></li>
+                {% endif %}
+            {% endif %}
+        {% endfor %}
+    </ul>
+</nav>

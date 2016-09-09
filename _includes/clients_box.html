@@ -1,0 +1,9 @@
+<div class="row">
+    <div class="grid_12">
+        <div class="client_box">
+            {% for client in page.clients %}
+                <a href="{{ client.url }}"><img src="{{ client.logo_url }}" alt="{{ client.logo_alt }}"></a>
+            {% endfor %}
+        </div>
+    </div>
+</div>

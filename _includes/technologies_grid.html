@@ -1,0 +1,38 @@
+<div class="container">
+    <div class="row">
+        <div class="grid_12">
+            <div class="central">
+                <h4 class="title2">
+                    {{ page.technologies_grid.title }}
+                </h4>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="grid_6">
+            {% for item in page.technologies_grid.items %}
+                {% assign item_mod = forloop.index0 | modulo: 2 %}
+                {% if item_mod == 0 %}
+                    <div class="icon_box {{ item.icon_class }}">
+                        <h6>{{ item.title }}</h6>
+                        <p>{{ item.text }}</p>
+                    </div>
+                {% endif %}
+            {% endfor %}
+        </div>
+        <div class="grid_6">
+            {% for item in page.technologies_grid.items %}
+                {% assign item_mod = forloop.index0 | modulo: 2 %}
+                {% if item_mod == 1 %}
+                    <div class="icon_box {{ item.icon_class }}">
+                        <h6>{{ item.title }}</h6>
+                        <p>{{ item.text }}</p>
+                    </div>
+                {% endif %}
+            {% endfor %}
+        </div>
+    </div>
+</div>

@@ -1,0 +1,75 @@
+@font-face {
+  font-family: 'pyShopTechnologies';
+  src:  url('../fonts/pyShopTechnologies.eot?gyued1');
+  src:  url('../fonts/pyShopTechnologies.eot?gyued1#iefix') format('embedded-opentype'),
+    url('../fonts/pyShopTechnologies.ttf?gyued1') format('truetype'),
+    url('../fonts/pyShopTechnologies.woff?gyued1') format('woff'),
+    url('../fonts/pyShopTechnologies.svg?gyued1#pyShopTechnologies') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="pyShopTechIcon-"], [class*=" pyShopTechIcon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'pyShopTechnologies' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.pyShopTechIcon-AngularJS:before {
+  content: "\e900";
+}
+.pyShopTechIcon-Ansible:before {
+  content: "\e901";
+}
+.pyShopTechIcon-celery:before {
+  content: "\e902";
+}
+.pyShopTechIcon-Django:before {
+  content: "\e903";
+}
+.pyShopTechIcon-Docker:before {
+  content: "\e904";
+}
+.pyShopTechIcon-javascript:before {
+  content: "\e905";
+}
+.pyShopTechIcon-microservices:before {
+  content: "\e906";
+}
+.pyShopTechIcon-mongoDB:before {
+  content: "\e907";
+}
+.pyShopTechIcon-neo4j:before {
+  content: "\e908";
+}
+.pyShopTechIcon-nginx:before {
+  content: "\e909";
+}
+.pyShopTechIcon-postgresql:before {
+  content: "\e90a";
+}
+.pyShopTechIcon-python:before {
+  content: "\e90b";
+}
+.pyShopTechIcon-redis:before {
+  content: "\e90c";
+}
+.pyShopTechIcon-REST:before {
+  content: "\e90d";
+}
+.pyShopTechIcon-TDD:before {
+  content: "\e90e";
+}
+.pyShopTechIcon-tornadoweb:before {
+  content: "\e90f";
+}
+

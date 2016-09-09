@@ -1,0 +1,23 @@
+<div class="row">
+    <div class="grid_12">
+        <div class="central">
+            <h4 class="title2">
+                {{ page.key_priorities.title }}
+            </h4>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    {% for item in page.key_priorities.blocks %}
+    <div class="grid_3">
+        <div class="feature_box">
+            <h5>{{ item.title }}</h5>
+            <img src="{{ item.logo }}" alt="{{ item.logo_alt }}">
+            <p>
+                {{ item.text }}
+            </p>
+        </div>
+    </div>
+    {% endfor %}
+</div>
